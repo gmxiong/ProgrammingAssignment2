@@ -22,7 +22,7 @@ makeCacheMatrix <- function(x = matrix() {
 
 
 ## Function cacheSolve calculate the inverse matrix created 
-## by the function makeCachematrix. Its variable is the output 
+## by the function makeCachematrix. Its first variable is the output 
 ## list of makeCacheMatrix. It first check if the inverse matrix
 ## exists or not. when exists it will get it otherwise it will
 ## compute it.
