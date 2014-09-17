@@ -1,12 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
 ## This function returns a list of operations to set 
-## and get a matrix x from an exist matrix y
-## which may not be in the current environment, and
-## can also set and get its inverse xi if it exists 
-## already. 
+## and get a matrix x from an existing matrix y which 
+## may not be in the current environment; and there
+## are operations to set and get x's inverse matrix xi. 
 makeCacheMatrix <- function(x = matrix() {
           xi <- NULL
           set <- function(y) {
@@ -24,10 +19,21 @@ makeCacheMatrix <- function(x = matrix() {
 }
 
 
-## Write a short comment describing this function
+## Function cacheSolve calculate the inverse matrix created 
+## by the function makeCachematrix. Its variable is the output 
+## list of makeCacheMatrix. It first check if the inverse matrix
+## exists or not. when exists it will get it otherwise it will
+## compute it.
 
 cacheSolve <- function(x, ...) {
-
-        ## Return a matrix that is the inverse of 'x'
+        xi <- x$getInverse()
+        if(!is.null(xi)) {
+                message("getting cached data")
+                return(xi)
+        }
+        data <- x$get()
+        xi <- solve(data, ...)
+        x$setInverse(xi)
+        xi
         
 }
