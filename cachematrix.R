@@ -27,7 +27,7 @@ makeCacheMatrix <- function(x = matrix() {
 ## exists or not. when exists it will get it otherwise it will
 ## compute it.
 ## This function is just a modefication of the second example,
-## the code cacheMean. 
+## i.e. the code cacheMean. 
 
 cacheSolve <- function(x, ...) {
         xi <- x$getInverse()
