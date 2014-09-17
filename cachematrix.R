@@ -2,6 +2,8 @@
 ## and get a matrix x from an existing matrix y which 
 ## may not be in the current environment; and there
 ## are operations to set and get x's inverse matrix xi. 
+## This function was just a modefication of the first 
+## example, i.e. makeVector 
 makeCacheMatrix <- function(x = matrix() {
           xi <- NULL
           set <- function(y) {
@@ -24,6 +26,8 @@ makeCacheMatrix <- function(x = matrix() {
 ## list of makeCacheMatrix. It first check if the inverse matrix
 ## exists or not. when exists it will get it otherwise it will
 ## compute it.
+## This function is just a modefication of the second example,
+## the code cacheMean. 
 
 cacheSolve <- function(x, ...) {
         xi <- x$getInverse()
